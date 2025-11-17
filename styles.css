@@ -359,6 +359,8 @@ body {
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .grid-item:hover {
@@ -528,6 +530,13 @@ body {
 .education-compact img {
   width: 40px;
   height: 40px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+[data-theme="light"] .education-compact img {
+  filter: none;
+  opacity: 1;
 }
 
 .education-compact strong {
@@ -599,8 +608,23 @@ body {
   transition: all 0.3s ease;
 }
 
+/* GitHub icon dark mode fix */
+.social-btn img[alt="GitHub"] {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+[data-theme="light"] .social-btn img[alt="GitHub"] {
+  filter: none;
+  opacity: 1;
+}
+
 .social-btn:hover img {
   transform: scale(1.1);
+}
+
+.social-btn:hover img[alt="GitHub"] {
+  opacity: 1;
 }
 
 /* Section Labels */
@@ -784,6 +808,8 @@ body {
 
 .project-info {
   padding: 2rem;
+  position: relative;
+  z-index: 5;
 }
 
 .project-info h3 {
@@ -806,6 +832,9 @@ body {
   align-items: center;
   gap: 0.5rem;
   transition: gap 0.3s ease;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .project-link:hover {
@@ -824,6 +853,9 @@ body {
   color: inherit;
   display: block;
   height: 100%;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .blog-img {
@@ -846,6 +878,8 @@ body {
 
 .blog-info {
   padding: 2rem;
+  position: relative;
+  z-index: 5;
 }
 
 .blog-tag {
@@ -938,6 +972,24 @@ body {
   object-fit: contain;
   position: relative;
   z-index: 1;
+}
+
+/* Contact icons dark mode fix */
+.contact-method img[alt="Email"],
+.contact-method img[alt="LinkedIn"] {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+[data-theme="light"] .contact-method img[alt="Email"],
+[data-theme="light"] .contact-method img[alt="LinkedIn"] {
+  filter: none;
+  opacity: 1;
+}
+
+.contact-method:hover img[alt="Email"],
+.contact-method:hover img[alt="LinkedIn"] {
+  opacity: 1;
 }
 
 .contact-method div,
