@@ -4,651 +4,303 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chandan Ahire</title>
+    <title>Chandan Ahire - Software Engineer</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="icon" type="image/x-icon" href="./assets/profile-pic.png">
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Chandan Ahire</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skillset">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#blogs">Blogs</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-outline"></div>
+
+    <!-- Floating Navbar -->
+    <nav class="floating-nav">
+      <div class="nav-logo">CA</div>
+      <div class="nav-menu">
+        <a href="#hero">Home</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#connect">Connect</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Chandan Ahire</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#skillset" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#blogs" onclick="toggleMenu()">Blogs</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#hero" onclick="toggleMenu()">Home</a>
+      <a href="#work" onclick="toggleMenu()">Work</a>
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="#connect" onclick="toggleMenu()">Connect</a>
+    </div>
+
+    <!-- Main Bento Grid -->
+    <main class="bento-grid">
+      
+      <!-- Hero Card - Large -->
+      <div class="grid-item hero-large" id="hero">
+        <div class="hero-wrapper">
+          <div class="profile-pic">
+            <img src="./assets/profile-pic.png" alt="Chandan Ahire" />
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Chandan Ahire profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Chandan Ahire</h1>
-        <p class="section__text__p2">Software Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Chandan_Ahire.pdf')"
-          >
+          <div class="hero-info">
+            <h1 class="display-name">Chandan Ahire</h1>
+            <p class="tagline">Software Engineer</p>
+            <div class="hero-actions">
+              <button class="btn-download" onclick="window.open('./assets/ChandanAhire.pdf')">
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+              <button class="btn-contact" onclick="location.href='#connect'">
+                Let's Talk
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin (1).png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/chandan-ahire-7807331b6/'"
-          >
-        </img>
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/phoenix-1729'"
-          />
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/code-forces.png"
-            alt="My code-forces profile"
-            class="icon"
-            onclick="location.href='https://codeforces.com/profile/nick_heck'"
-          />
-          <img
-            src="./assets/leetcode.png"
-            alt="My Leetcode profile"
-            class="icon"
-            onclick="location.href='https://leetcode.com/u/phoenix1729/'"
-          />
-          <img
-            src="./assets/chesscom_logo_pawn.png"
-            alt="My Chess profile"
-            class="icon"
-            onclick="location.href='https://www.chess.com/member/phoenix_1729'"
-          />
         </div>
       </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <!-- <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div> -->
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech. in Electronics and Communication Engineering <br />Indian Institute of Information Technology Allahabad <br /> 2019-2023 <br /> CGPA : 7.9</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I'm a software engineer with a passion for backend development and cloud optimization. 
-              In my current role as a Software Engineer 2 at Juniper Networks, I focus on enhancing system performance and efficiency.
-              My experience spans across Java, GoLang, Django, and ReactJS, allowing me to tackle diverse challenges. 
-              I enjoy blending technical depth with problem-solving. 
-              With a strong coding foundation and a proactive approach, I’m always looking for innovative ways to improve system functionality and user experience.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <div class="exp-box">
 
-      
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="exp-list">
-      <div class="experience-list">
-        <div class="experience-item">
-            <span class="exp-icon">
-                <svg fill="currentcolor" viewBox="0 0 256 256" class="icon-svg">
-                    <path d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z"></path>
-                </svg>
-            </span>
-            <h3 class="position-title">Software Engineer 2</h3>
-            <span class="company">Juniper Networks</span>
-            <time class="date-range">July 2024 - Present</time>
-            <div class="responsibilities">
-                <!-- <p>Responsibilities include:</p> -->
-                <ul>
-                    <li>Successfully managed and developed a comprehensive image management feature.</li>
-                    <li>Performed <b>Performance Optimization</b>, reducing 2GB image upload time by over <b>90%</b>, from 10 minutes to less than <b>1 minute</b>, using file streaming, multipart
-                      uploads, and chunk-based parallel processing. </li>
-                    <li>Improved cloud service efficiency using Kubernetes, gRPC, and <b>Kafka</b>.</li>
-                    <li>Migrated ElasticSearch service to Opensearch for Global-Search functionality.</li>
-                    <li>Languages and Tools used: <b>Java</b>, <b>GoLang</b>, Django, Python, ReactJS, ElasticSearch, XSLT, <b>postgresSQL</b>.</li>
-                </ul>
+      <!-- About Card -->
+      <div class="grid-item about-card">
+        <div class="card-label">About</div>
+        <p class="about-text">
+          I'm an engineer who enjoys owning problems end-to-end and building systems that scale. At Dream11, I worked on ad-tech, SDUI, and streaming pipelines, building services that process <strong>10M–20M RPM</strong> and driving cost savings. I love solving complex problems in production and competitive programming.
+        </p>
+        <div class="education-compact">
+          <img src="./assets/education.png" alt="Education" />
+          <div>
+            <strong>IIIT Allahabad</strong>
+            <p>B.Tech ECE · 2019-2023</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Social Links Card -->
+      <div class="grid-item social-card">
+        <div class="card-label">Connect</div>
+        <div class="social-grid">
+          <a href="https://www.linkedin.com/in/chandan-ahire-7807331b6/" target="_blank" class="social-btn" title="LinkedIn">
+            <img src="./assets/linkedin (1).png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/phoenix-1729" target="_blank" class="social-btn" title="GitHub">
+            <img src="./assets/github.png" alt="GitHub" />
+          </a>
+          <a href="https://codeforces.com/profile/nick_heck" target="_blank" class="social-btn" title="CodeForces">
+            <img src="./assets/code-forces.png" alt="CodeForces" />
+          </a>
+          <a href="https://leetcode.com/u/phoenix1729/" target="_blank" class="social-btn" title="LeetCode">
+            <img src="./assets/leetcode.png" alt="LeetCode" />
+          </a>
+          <a href="https://www.chess.com/member/phoenix_1729" target="_blank" class="social-btn" title="Chess.com">
+            <img src="./assets/chesscom_logo_pawn.png" alt="Chess.com" />
+          </a>
             </div>
           </div>
-        <div class="experience-item">
-            <span class="exp-icon">
-                <svg fill="currentcolor" viewBox="0 0 256 256" class="icon-svg">
-                    <path d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z"></path>
-                </svg>
-            </span>
-            <h3 class="position-title">Software Engineer 1</h3>
-            <span class="company">Juniper Networks</span>
-            <time class="date-range">June 2023 - June 2024</time>
-            <div class="responsibilities">
-                <ul>
-                    <li>Added a new engine type for URLs, addressing various performance and functionality enhancements. Contributed to the
-                      seamless migration of <b>URL categories</b> from the older engine to the new engine type, ensuring a smooth transition and
-                      improved system efficiency.</li>
-                    <li>Leveraged <b>Istio</b> for service mesh management, enhancing scalability of microservices by <b>20%</b>.</li>
-                    <li>Developed and managed insigts service, which collects all the insights of the application for internal use.</li>
-                    <li>Added support to new firewall devices.</li>
-                    <li>Languages and Tools used: Java, <b>GoLang</b>, Django, gRPC, Kafka, Kubernetes, Python, ReactJS, <b>ElasticSearch</b>, postgresSQL.</li>
-                </ul>
+
+      <!-- Experience Section Label -->
+      <div class="grid-item section-label" id="work">
+        <h2>Experience & Skills</h2>
+        <p>Building production systems with cutting-edge technology</p>
             </div>
-          </div>
-        <div class="experience-item">
-            <span class="exp-icon">
-                <svg fill="currentcolor" viewBox="0 0 256 256" class="icon-svg">
-                    <path d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z"></path>
-                </svg>
-            </span>
-            <h3 class="position-title">Software Engineer Intern</h3>
-            <span class="company">Juniper Networks</span>
-            <time class="date-range">Jan 2023 - June 2023</time>
-            <div class="responsibilities">
-                <ul>
-                    <li>Developed two features from scratch: <b>ICAP redirect and SSL Initiation</b> in Juniper Security Director Cloud</li>
-                    <li>Both features are associated with the firewall device through SD cloud, which provides <b>easy monitoring</b> and control of
-                      network resources through a single interface.</li>
-                    <li> Languages and Tools used: <b>Java</b>, <b>GoLang</b>, gRPC, Kafka, postgresSQL, Kubernetes, Java, ReactJS, ElasticSearch, XSLT.</li>
+
+      <!-- Experience Cards -->
+      <div class="grid-item exp-card exp-dream">
+        <div class="exp-timeline">December 2024 - Present</div>
+        <h3>Software Engineer</h3>
+        <div class="company-name">Dream11</div>
+        <ul class="exp-list">
+          <li>Working on ad-tech, SDUI, and streaming pipelines</li>
+          <li>Building services processing <strong>10M-20M RPM</strong></li>
+          <li>Achieved <strong>60% cost savings</strong> through architectural redesigns</li>
+          <li>Optimizing high-traffic systems at scale</li>
                 </ul>
-            </div>
+        <div class="tech-pills">
+          <span>Java(Vert.x)</span>
+          <span>Kafka</span>
+          <span>Aerospike</span>
+          <span>MySQL</span>
+          <span>Redis</span>
+          <span>Ad-Tech</span>
           </div>
       </div>
+
+      <div class="grid-item exp-card exp-1">
+        <div class="exp-timeline">January 2023 - July 2024</div>
+        <h3>Software Engineer</h3>
+        <div class="company-name">Juniper Networks</div>
+        <ul class="exp-list">
+          <li>Built comprehensive image management feature</li>
+          <li><strong>90% performance boost</strong> - 2GB upload: 10min → <1min</li>
+          <li>Improved cloud services with Kubernetes, gRPC, Kafka</li>
+          <li>Built ICAP Redirect and SSL Initiation features</li>
+        </ul>
+        <div class="tech-pills">
+          <span>Java</span>
+          <span>Go</span>
+          <span>Kafka</span>
+          <span>K8s</span>
+          <span>PostgreSQL</span>
+          <span>ElasticSearch</span>
   </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#skillset'"
-      />
-    </section>
-    <section id="skillset">
-      <p class="section__text__p1">My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers-skills">
-          <div class="details-container-skills item1">
-            <h2 class="experience-sub-title">Technical</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GoLang</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>postgresSQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Kafka</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>gRPC</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Docker</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Kuberneetes</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Linux</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Tick icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Cloud Operations</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+
+      <!-- Skills Section -->
+      <div class="grid-item skills-compact skills-tools" id="skills">
+        <div class="skills-category">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span>C++</span>
+            <span>Java</span>
+            <span>Go</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>TypeScript</span>
           </div>
-          <div class="details-container-skills item2">
-            <h2 class="experience-sub-title">Soft Skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Teamwork</h3>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Conflict Resolution</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Creative Thinking</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Time Management</h3>
-                </div>
-              </article>
-            </div>
+        <div class="skills-category">
+          <h4>Frameworks and Toolkit</h4>
+          <div class="skill-tags">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Django</span>
+            <span>FastAPI</span>
+            <span>Vert.x</span>
           </div>
-          <div class="details-container-skills item3">
-            <h2 class="experience-sub-title">IT Constructs</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Data Structures and Algorithms</h3>
-                  <p>Experienced</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Operating Systems</h3>
-                  <p>Intermediate</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Object Oriented Programming</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DBMS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+
+      <div class="grid-item skills-compact skills-tools">
+        <div class="skills-category">
+          <h4>Infrastructure</h4>
+          <div class="skill-tags">
+            <span>Kubernetes</span>
+            <span>Docker</span>
+            <span>Kafka</span>
+            <span>gRPC</span>
+            <span>Istio</span>
           </div>
-          <div class="details-container-skills item4">
-            <h2 class="experience-sub-title">Hobbies</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Badminton</h3>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Swimming</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Chess</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Books</h3>
-                </div>
-              </article>
-            </div>
+        <div class="skills-category">
+          <h4>Databases</h4>
+          <div class="skill-tags">
+            <span>MySQL</span>
+            <span>Aerospike</span>
+            <span>DynamoDB</span>
+            <span>Redis</span>
+            <span>PostgreSQL</span>
+            <span>ElasticSearch</span>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers-projects">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/p1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">2 X 2 RUBIKS CUBE SOLVER</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/phoenix-1729/2-2-Rubiks-cube-solver'"
-              >
-                Github
-              </button>
-            </div>
+      <div class="grid-item skills-compact skills-tools">
+        <div class="skills-category">
+          <h4>IT Constructs</h4>
+          <div class="skill-tags">
+            <span>Data Structures and Algorithms</span>
+            <span>AI Development</span>
+            <span>Operating Systems</span>
+            <span>Object Oriented Programming</span>
+            <span>Database Management System</span>
+            <span>Software Engineering</span>
+            <span>System Design</span>
+            <span>Computer Networks</span>
+            <span>Machine Learning</span>
           </div>
-        </div>
+                </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#blogs'"
-      />
-    </section>
-    <section id="blogs">
-      <p class="section__text__p1">Read My all</p>
-      <h1 class="title">Blogs</h1>
-      <div class="experience-details-container">
-        <div class="about-containers-blogs">
-          <div class="details-container color-container">
-            <a href="https://medium.com/@chandanahire25/solving-the-3x3x3-rubiks-cube-an-in-depth-guide-with-code-example-775e9c980553">
-            <div class="article-container">
-              <img
-                src="./assets/blog-1.webp"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Solving the 3x3x3 Rubik’s Cube: An In-depth Guide with Code Example</h2>
+      <!-- Projects & Blog Section -->
+      <div class="grid-item section-label">
+        <h2>Projects & Writings</h2>
+        <p>Side projects and technical articles</p>
+      </div>
+
+      <!-- Projects -->
+      <div class="grid-item project-card"  id="projects">
+        <div class="project-img">
+          <img src="./assets/p1.png" alt="Rubiks Cube" />
+        </div>
+        <div class="project-info">
+          <h3>2×2 Rubik's Cube Solver</h3>
+          <p>Intelligent solver using optimization algorithms</p>
+          <a href="https://github.com/phoenix-1729/2-2-Rubiks-cube-solver" target="_blank" class="project-link">
+            View on GitHub →
           </a>
+            </div>
+            </div>
+
+      <!-- Blog -->
+      <div class="grid-item blog-card">
+        <a href="https://medium.com/@chandanahire25/solving-the-3x3x3-rubiks-cube-an-in-depth-guide-with-code-example-775e9c980553" target="_blank">
+          <div class="blog-img">
+            <img src="./assets/blog-1.webp" alt="Blog" />
           </div>
+          <div class="blog-info">
+            <div class="blog-tag">Article</div>
+            <h3>Solving 3×3×3 Rubik's Cube</h3>
+            <p>In-depth guide with code examples</p>
         </div>
+        </a>
+      </div>
+      <div class="grid-item blog-card">
+        <a href="https://medium.com/@chandanahire25/why-dumb-and-fast-ai-can-beat-smart-humans-0432b550473e" target="_blank">
+          <div class="blog-img">
+            <img src="./assets/blob2.webp" alt="Blog" />
+          </div>
+          <div class="blog-info">
+            <div class="blog-tag">Article</div>
+            <h3>Why Dumb and Fast AI can beat Smart Humans</h3>
+            <p>Exploring the potential of AI to outperform humans in certain tasks</p>
+        </div>
+        </a>
+      </div>
+
+      <!-- Contact Card -->
+      <div class="grid-item contact-card" id="connect">
+        <h2>Let's Connect</h2>
+        <p class="contact-subtitle">Open to interesting opportunities and collaborations</p>
+        <div class="contact-methods">
+          <a href="mailto:chandanahire25@gmail.com" class="contact-method">
+            <img src="./assets/email.png" alt="Email" />
+            <div>
+              <strong>Email</strong>
+              <p>chandanahire25@gmail.com</p>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/chandan-ahire-7807331b6/" target="_blank" class="contact-method">
+            <img src="./assets/linkedin.png" alt="LinkedIn" />
+            <div>
+              <strong>LinkedIn</strong>
+              <p>Let's connect professionally</p>
+          </div>
+          </a>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:chandanahire25@gmail.com">chandanahire25@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/chandan-ahire-7807331b6/">LinkedIn</a></p>
-        </div>
+
+      <!-- Footer Note -->
+      <div class="grid-item footer-card">
+        <p>© 2025 Chandan Ahire · Built with passion</p>
       </div>
-      <img
-        src="./assets/double-up.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#profile'"
-      />
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blogs">Blogs</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Chandan Ahire. All Rights Reserved.</p>
-    </footer>
+
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
